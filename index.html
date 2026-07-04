@@ -2,31 +2,30 @@
 <html>
 <head>
     <title>BBLTC</title>
-</head>
     <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <h1>SISENEG 11.1-9</h1>
-
-   <div class="container">
+    <div class="container">
         <h1>SISENEG 11.1-9</h1>
 
         <input type="text" id="resposta">
         <button onclick="verificar()">Enviar</button>
     </div>
-<script>
-function verificar() {
-    let resposta = document
-        .getElementById("resposta")
-        .value
-        .toLowerCase()
-        .trim();
 
-    if (resposta === "babel") {
-        window.location.href = "sala1.html";
-    } else {
-        alert("Nada acontece.");
-    }
-}
-</script>
+    <script>
+        function verificar() {
+            let resposta = document
+                .getElementById("resposta")
+                .value
+                .toLowerCase()
+                .trim();
+
+            if (resposta === "babel") {
+                window.location.href = "sala1.html";
+            } else {
+                alert("Nada acontece.");
+            }
+        }
+    </script>
 </body>
 </html>
