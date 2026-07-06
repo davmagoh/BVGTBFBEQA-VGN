@@ -12,6 +12,23 @@
         <button onclick="verificar()">Enviar</button>
     </div>
 
+<div id="bloco-notas">
+    <h3>Anotações</h3>
+    <textarea id="notas" placeholder="Escreva suas observações..."></textarea>
+</div>
+
+<script>
+    const notas = document.getElementById("notas");
+
+    // Carrega as anotações salvas
+    notas.value = localStorage.getItem("anotacoes") || "";
+
+    // Salva automaticamente enquanto digita
+    notas.addEventListener("input", () => {
+        localStorage.setItem("anotacoes", notas.value);
+    });
+</script>
+    
     <script>
         function verificar() {
             let resposta = document
