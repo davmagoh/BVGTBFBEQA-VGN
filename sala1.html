@@ -2,10 +2,42 @@
 <html>
 <head>
     <title>Sala 1</title>
-      <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>A porta abre no instante em que o código é inserido.</h1>
     <p>Entre milhares de livros, um contém uma mensagem...</p>
+
+    <hr>
+
+    <h2>Anotações</h2>
+    <textarea id="anotacao" rows="6" cols="50"
+        placeholder="Escreva suas observações aqui..."></textarea>
+
+    <hr>
+
+    <h2>Pergunta</h2>
+    <p>Quem construiu a torre?</p>
+
+    <input type="text" id="resposta">
+    <button onclick="verificar()">Enviar</button>
+
+    <script>
+        function verificar() {
+            let resposta = document
+                .getElementById("resposta")
+                .value
+                .toLowerCase()
+                .trim();
+
+            if (resposta === "babel") {
+                window.location.href = "sala2.html";
+            } else if (resposta === "nimrode") {
+                window.location.href = "arquivo-secreto.html";
+            } else {
+                window.location.href = "erro.html";
+            }
+        }
+    </script>
 </body>
 </html>
